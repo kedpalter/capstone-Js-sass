@@ -5,36 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capstone Js</title>
+    <!-- FontAwesome 6.2.0 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 
 <body>
     <div class="container">
-        <header class="header">Header</header>
-        <section class="menu">Menu</section>
-        <section class="banner">Banner</section>
-        <section class="products" id="productsList">
-            <div class="prod-card" id="">
-                <div class="prod-card-body">
-                    <div class="prod-img"><img src="https://dummyimage.com/220x156/000/fff" alt=""></div>
-                    <h3 class="prod-name">Adidas</h3>
-                    <p class="prod-desc">short des</p>
-                </div>
-                <div class="prod-card-footer">
-                    <button class="prod-buynow-btn">Buy now</button>
-                    <div class="prod-price">
-                        <span>85$</span>
-                    </div>
+        <header class="header">
+            <div class="">
+                <img src="./assets/img/9c25bec2c255c800e61e47ec7698ffdc99e50a95.png" alt="logo" class="logo">
+            </div>
+            <div class="nav">
+                <img src="./assets/img/2df255d85b7f1635f1ce04fe2149c056a8e340c9.png" alt="cart">
+                <a href="">Login</a>
+                <a href="">Register</a>
+            </div>
+        </header>
+        <section class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Kid</a></li>
+                <li><a href="#">Sport</a></li>
+            </ul>
+        </section>
+        <section class="banner">
+            <div class="carousel">
+                <img src="./assets/img/19016b7feceeac395b345ee158dadabb89414849.png" alt="green-shoe">
+                <div class="info">
+                    <h1>Product name</h1>
+                    <p>Product description...</p>
+                    <button class="banner-button">Buy now</button>
                 </div>
             </div>
-            
+
         </section>
+        <section class="product-section">
+            <h1>- Product Feature -</h1>
+            <div class="products" id="productsList">
+                <div class="prod-card" id="">
+                    <div class="prod-img"><img src="https://dummyimage.com/220x156/000/fff" alt=""></div>
+                    <div class="prod-card-body">
+                        <h3 class="prod-name">Adidas</h3>
+                        <p class="prod-desc">short des</p>
+                    </div>
+                    <div class="prod-card-footer">
+                        <button class="prod-buynow-btn">Buy now</button>
+                        <div class="prod-price">
+                            <span>85$</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
 
 
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.10.0/axios.min.js" integrity="sha512-WkZrEcQ5LMyNy6Y2PQf+Tu3vMcsmKKRKuPXtJSTHQJ3mpuvLRlA5dlDDhrrcXfyWr6Z/y3wIMfjfqVFO/gDZYQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.10.0/axios.min.js"
+        integrity="sha512-WkZrEcQ5LMyNy6Y2PQf+Tu3vMcsmKKRKuPXtJSTHQJ3mpuvLRlA5dlDDhrrcXfyWr6Z/y3wIMfjfqVFO/gDZYQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./src/js/index.js"></script>
 </body>
 

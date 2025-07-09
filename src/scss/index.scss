@@ -2,97 +2,204 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
 }
 
 .container {
     .header {
-
+        background-color: #000;
         height: 50px;
-        border: solid black 1px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 50px;
+
+        .logo {
+            height: 32px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 13%;
+
+            img {
+                height: 26px;
+            }
+
+            a {
+                color: #f6f6f6;
+                font-weight: 300;
+            }
+        }
     }
 
     .menu {
         height: 50px;
-        border: solid black 1px;
+        display: flex;
+        align-items: center;
+        padding: 0 50px;
+
+        ul li {
+            list-style: none;
+            display: inline-block;
+            font-size: 20px;
+            margin-right: 20px;
+            padding-bottom: 4px;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 1px;
+                background-color: #000;
+                transition: 0.5s;
+            }
+
+            &:hover {
+                &::after {
+                    width: 100%;
+                    transition: 0.5s;
+                }
+            }
+
+            a {
+                color: #000;
+            }
+        }
     }
 
     .banner {
-        height: 50px;
-        border: solid black 1px;
+        height: 530px;
+        background: url("/assets/img/c714162af9ebca7dbf6f82f47b04b073782bb7fb.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom center;
+
+        .carousel {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .info {
+
+
+                h1 {
+                    font-size: 40px;
+                    font-weight: 300;
+                }
+
+                p {
+                    font-size: 20px;
+                    margin: 10px 0;
+                }
+
+                .banner-button {
+                    width: 150px;
+                    height: 50px;
+                    font-size: 20px;
+                    font-weight: 300;
+                    color: #fff;
+                    background-color: #F8B653;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+        }
+
+
     }
 
-    .products {
-        width: 80%;
-        margin: auto;
-        border: solid red 1px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+    .product-section {
+        h1 {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 40px;
+            font-weight: 300;
+        }
 
-        .prod-card {
-            width: 31%;
-            height: 370px;
-            border: solid black 1px;
-            background-color: #F8F8F8;
-            margin-bottom: 30px;
+        .products {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
 
-            .prod-card-body {
-
-                height: 306px;
+            .prod-card {
+                width: 30%;
+                // height: 370px;
+                border: solid black 1px;
+                background-color: #F8F8F8;
+                margin-bottom: 30px;
                 display: flex;
                 flex-direction: column;
+
                 .prod-img {
                     // width: 100%;
                     height: 250px;
-                    border:solid blue 1px;
                     width: 220px;
                     // justify-self: center;
-                    align-self: center;
+                    justify-self: center;
                     padding: 15px 0;
+
                     img {
                         width: 100%;
+
                     }
                 }
 
-                .prod.name {
-                    font-size: 24px;
-                    font-weight: 300;
-                    line-height: 100%;
+                .prod-card-body {
+                    padding: 7px 15px;
+
+                    .prod.name {
+                        font-size: 24px;
+                        font-weight: 300;
+                        line-height: 100%;
+                    }
+
+                    .prod.desc {
+                        font-size: 20px;
+                        font-weight: 300;
+                        color: #cbc9c9;
+                    }
                 }
 
-                .prod.desc {
-                    font-size: 20px;
-                    font-weight: 300;
-                    color: #cbc9c9;
-                    line-height: 100%;
-                }
-            }
 
-
-            .prod-card-footer {
-                height: 64px;
-                display: flex;
-                
-                .prod-buynow-btn {
-                    font-size: 24px;
-                    font-weight: 200;
-                    background-color: #E1B067;
-                    flex-grow: 1;
-                    cursor: pointer;
-                }
-
-                .prod-price {
-                    height: 100%;
-                    flex-grow: 1;
-                    background-color: #DEDDDC;
-                    font-size: 24px;
-                    font-weight: 600;
+                .prod-card-footer {
+                    height: 64px;
                     display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-            }
 
+                    .prod-buynow-btn {
+                        font-size: 24px;
+                        font-weight: 200;
+                        background-color: #E1B067;
+                        flex-grow: 1;
+                        border: none;
+                        cursor: pointer;
+                    }
+
+                    .prod-price {
+                        height: 100%;
+                        flex-grow: 1;
+                        background-color: #DEDDDC;
+                        font-size: 24px;
+                        font-weight: 600;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+
+            }
         }
     }
+
+
 }
