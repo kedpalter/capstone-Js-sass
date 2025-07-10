@@ -23,7 +23,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 13%;
+  gap: 10px;
 }
 
 .container .header .nav img {
@@ -135,6 +135,7 @@
 .container .product-section .products .prod-card .prod-img {
   height: 250px;
   width: 220px;
+  align-self: center;
   justify-self: center;
   padding: 15px 0;
 }
@@ -167,9 +168,13 @@
 .container .product-section .products .prod-card .prod-card-footer .prod-buynow-btn {
   font-size: 24px;
   font-weight: 200;
+  color: #000;
   background-color: #E1B067;
   flex-grow: 1;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 }
 

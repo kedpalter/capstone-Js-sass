@@ -15,13 +15,13 @@ let renderProducts = (arrProd) => {
     for (let prod of arrProd) {
         gridProd += `
             <div class="prod-card">
+            <div class="prod-img"><img src="${prod.image}" alt=""></div>
                 <div class="prod-card-body">
-                    <div class="prod-img"><img src="${prod.image}" alt=""></div>
                     <h3 class="prod-name">${prod.name}</h3>
                     <p class="prod-desc">${prod.shortDescription}</p>
                 </div>
                 <div class="prod-card-footer">
-                    <button class="prod-buynow-btn" onclick="">Buy now</button>
+                    <a href="./src/pages/detail.html" target="_blank" class="prod-buynow-btn" onclick="">Buy now</a>
                     <div class="prod-price">
                         <span>${prod.price}$</span>
                     </div>

@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    .header {
+        background-color: #000;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 50px;
+
+        .logo {
+            height: 32px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+
+            img {
+                height: 26px;
+            }
+
+            a {
+                color: #f6f6f6;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .menu {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        padding: 0 50px;
+
+        ul li {
+            list-style: none;
+            display: inline-block;
+            font-size: 20px;
+            margin-right: 20px;
+            padding-bottom: 4px;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 1px;
+                background-color: #000;
+                transition: 0.5s;
+            }
+
+            &:hover {
+                &::after {
+                    width: 100%;
+                    transition: 0.5s;
+                }
+            }
+
+            a {
+                color: #000;
+            }
+        }
+    }
+
+    .register {
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 400;
+            padding: 30px 0;
+        }
+
+        .reg-form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0 50px;
+
+            .tag-input {
+                width: 45%;
+                height: 50px;
+                margin-bottom: 20px;
+                font-size: 20px;
+                position: relative;
+
+                input {
+                    width: 100%;
+                    border: none;
+                    border-bottom: solid #AE18E2 5px;
+                    height: 50px;
+                    margin-bottom: 20px;
+                    font-size: 30px;
+                    outline: none;
+                }
+
+                &::after {
+                    content: '(*)';
+                    position: absolute;
+                    color: red;
+                    top: 0;
+                    right: 0;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            .radio-group {
+                width: 35%;
+                margin: auto;
+                font-size: 30px;
+                display: flex;
+                justify-content: space-between;
+
+                input {
+                    width: 25px;
+                    height: 25px;
+                    accent-color: #AE18E2;
+                }
+
+            }
+        }
+
+        .btnSubmit {
+            width: 300px;
+            height: 50px;
+            margin: 30px auto;
+            display: block;
+            background-color: #AE18E2;
+            border: none;
+            font-size: 30px;
+            font-weight: 400;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+
+    .footer {
+        img {
+            width: 100%;
+        }
+    }
+}
