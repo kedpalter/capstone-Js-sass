@@ -8,8 +8,11 @@ let getAllShoes = async () => {
     //
     let html = renderProducts(responseData.data.content);
     document.querySelector('#productsList').innerHTML = html;
-
 }
+
+
+
+
 let renderProducts = (arrProd) => {
     let gridProd = '';
     for (let prod of arrProd) {
@@ -21,7 +24,7 @@ let renderProducts = (arrProd) => {
                     <p class="prod-desc">${prod.shortDescription}</p>
                 </div>
                 <div class="prod-card-footer">
-                    <a href="./src/pages/detail.html" target="_blank" class="prod-buynow-btn" onclick="">Buy now</a>
+                    <a href="./src/pages/detail.html?id=${prod.id}" target="_blank" class="prod-buynow-btn" onclick="">Buy now</a>
                     <div class="prod-price">
                         <span>${prod.price}$</span>
                     </div>
@@ -32,5 +35,6 @@ let renderProducts = (arrProd) => {
 }
 
 
-
 getAllShoes();
+
+export { getAllShoes };

@@ -1,99 +1,29 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Inter', sans-serif;
-}
+@import './index.scss';
 
 .container {
-    .header {
-        background-color: #000;
-        height: 50px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 50px;
-
-        .logo {
-            height: 32px;
-        }
-
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 10px;
-
-            img {
-                height: 26px;
-            }
-
-            a {
-                color: #f6f6f6;
-                font-weight: 300;
-            }
-        }
-    }
-
-    .menu {
-        height: 50px;
-        display: flex;
-        align-items: center;
-        padding: 0 50px;
-
-        ul li {
-            list-style: none;
-            display: inline-block;
-            font-size: 20px;
-            margin-right: 20px;
-            padding-bottom: 4px;
-            position: relative;
-
-            &::after {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                width: 0;
-                height: 1px;
-                background-color: #000;
-                transition: 0.5s;
-            }
-
-            &:hover {
-                &::after {
-                    width: 100%;
-                    transition: 0.5s;
-                }
-            }
-
-            a {
-                color: #000;
-            }
-        }
-    }
 
     .prod-detail {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: auto;
+        margin: 30px auto;
+        width: 85%;
 
         .prod-img {
-            flex-grow: 1;
             background-color: #F8F8F8;
-
             margin: 0 50px;
-            width: 25%;
-            // height: 350px;
+            width: 40%;
             display: flex;
             justify-content: center;
             align-items: center;
+
+            img {
+                width: 100%;
+            }
         }
 
         .detail-info {
-            flex-grow: 2;
+            width: 60%;
 
             .prod-name {
                 font-size: 30px;
@@ -138,8 +68,7 @@
             .quantity-choose {
                 margin: 20px 0;
 
-                .plus,
-                .minus {
+                .plus-minus {
                     width: 50px;
                     height: 50px;
                     font-size: 30px;
