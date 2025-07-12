@@ -39,23 +39,33 @@
         <section class="register">
             <h1>Register</h1>
             <div>
-                <form class="reg-form">
-                    <div class="tag-input"><input type="text" placeholder="email" class=""></div>
-                    <div class="tag-input"><input type="text" placeholder="name" class=""></div>
-                    <div class="tag-input"><input type="text" placeholder="password" class=""></div>
-                    <div class="tag-input"><input type="text" placeholder="phone" class=""></div>
-                    <div class="tag-input"><input type="text" placeholder="password confirm" id="" class=""></div>
+                <form class="reg-form" id="reg-form">
+                    <div class="tag-input">
+                        <input type="text" placeholder="email" class="" id="email">
+                        <div class="input-feedback" id="emailFeedback"></div>
+                    </div>
+
+                    <div class="tag-input"><input type="text" placeholder="name" class="" id="name">
+                        <div class="input-feedback" id="nameFeedback"></div>
+                    </div>
+                    <div class="tag-input"><input type="text" placeholder="password" class="" id="password"></div>
+                    <div class="tag-input"><input type="text" placeholder="phone" class="" id="phone">
+                        <div class="input-feedback" id="phoneFeedback"></div>
+                    </div>
+                    <div class="tag-input"><input type="text" placeholder="password confirm" id="cfmPassword" class="">
+                        <div class="input-feedback" id="pwFeedback"></div>
+                    </div>
                     <div class="radio-group">
                         <label>Gender</label>
                         <span>
-                            <input type="radio" name="" id="male">
+                            <input type="radio" name="gender" id="male" value="1">
                             <label for="male">Male</label>
                         </span>
                         <span>
-                            <input type="radio" name="" id="female">
+                            <input type="radio" name="gender" id="female" value="">
                             <label for="female">Female</label>
                         </span>
-
+                        <div class="input-feedback" id="genderFeedback"></div>
                     </div>
                 </form>
             </div>
@@ -66,6 +76,13 @@
             <img src="../../assets/img/9abf8bde98e06653cc6708fc0358162b13e17c63.png" alt="footer">
         </section>
     </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.10.0/axios.min.js"
+        integrity="sha512-WkZrEcQ5LMyNy6Y2PQf+Tu3vMcsmKKRKuPXtJSTHQJ3mpuvLRlA5dlDDhrrcXfyWr6Z/y3wIMfjfqVFO/gDZYQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="../js/register.js"></script>
 </body>
 
 </html>

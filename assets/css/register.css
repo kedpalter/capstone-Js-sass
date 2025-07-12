@@ -235,18 +235,37 @@
   height: 20px;
 }
 
+.container .register .reg-form .tag-input .input-feedback {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  font-size: 14px;
+  z-index: 10;
+  color: red;
+}
+
 .container .register .reg-form .radio-group {
   width: 35%;
   margin: auto;
   font-size: 30px;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .container .register .reg-form .radio-group input {
   width: 25px;
   height: 25px;
   accent-color: #AE18E2;
+}
+
+.container .register .reg-form .radio-group .input-feedback {
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  font-size: 14px;
+  z-index: 10;
+  color: red;
 }
 
 .container .register .btnSubmit {
